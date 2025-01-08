@@ -1,14 +1,6 @@
-[![DOI](https://zenodo.org/badge/265254045.svg)](https://zenodo.org/doi/10.5281/zenodo.10442485)
+<!--[![DOI](https://zenodo.org/badge/265254045.svg)](https://zenodo.org/doi/10.5281/zenodo.10442485)-->
 
 <!-- Get rid of the metarepo instructions (the two sections below this) once you're done. -->
-
-# metarepo
-## [Check out the website for instructions](https://immm-sfa.github.io/metarepo)
-`metarepo` is short for meta-repository, a GitHub repository that contains instructions to reproduce results in a published work. This repo is a template for creating your own metarepo.
-
-## Purpose
-A meta-repository creates a single point of access for someone to find all of the components that were used to create a published work for the purpose of reproducibility. This repository should contain references to all minted data and software as well as any ancillary code used to transform the source data, create figures for your publication, conduct the experiment, and / or execute the contributing software.
-
 <!-- Get rid of the metarepo instructions (the two sections above this) once you're done. -->
 
 # li_2025_ARC
@@ -42,18 +34,9 @@ https://github.com/DanLi-BU/WRF/tree/WRF_ALBEDO (tag: ALB_final)
 
 ### Input data
 
-Reference for each minted data source for your input data.  For example:
-
-Human, I.M. (2021). My input dataset name [Data set]. DataHub. https://doi.org/some-doi-number
-
-_your input data references here_
+[`wrfinputs_bdy`](./wrfinputs_bdy)
 
 ### Output data
-Reference for each minted data source for your output data.  For example:
-
-Human, I.M. (2021). My output dataset name [Data set]. DataHub. https://doi.org/some-doi-number
-
-_your output data references here_
 
 
 ## Contributing modeling software
@@ -65,17 +48,18 @@ _your output data references here_
 Fill in detailed info here or link to other documentation to thoroughly walkthrough how to use the contents of this repository to reproduce your experiment. Below is an example.
 
 1. Install the software components required to conduct the experiment from [contributing modeling software](#contributing-modeling-software)
-2. Download and install the supporting [input data](#input-data) required to conduct the experiment
-3. Run the following scripts in the `workflow` directory to re-create this experiment:
+2. Download and install the supporting [input data](#input-data) required to conduct the experiment.
+wrfinput_d03 is for the control run, and wrfinput_d03_alb60 is for the high-albedo run.
+Do NOT modify URBPARM.TBL when considering high albedo for roofs because modifying URBPARM.TBL will alter the roof albedo for all domains.
+3. Use the following namelist.input in the [`scripts`](./scripts) directory to re-create this experiment:
 
 | Script Name | Description | How to Run |
 | --- | --- | --- |
-| `namelist.input_July` | namelist to run the WRF part of the experiment of July |  |
-| `namelist.input_Feb` | namelist to run the WRF part of the experiment of Feb |  |
+| `namelist.input_July` | namelist to run the WRF experiment for July |  |
+| `namelist.input_Feb` | namelist to run the WRF experiment for Feb |  |
 
 4. change sf_sfclay_physics and bl_pbl_physics of all three domains to 2 for using MYJ
 5. change sf_sfclay_physics and bl_pbl_physics of all three domains to 5 for using MYNN
 
 ## Reproduce my figures
-Use the scripts found in the `figures` directory to reproduce the figures used in this publication. See details in the readme.docx document in
-
+Use the scripts found in the `figures` directory to reproduce the figures used in this publication.
