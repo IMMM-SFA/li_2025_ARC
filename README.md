@@ -42,7 +42,8 @@ https://github.com/DanLi-BU/WRF/tree/WRF_ALBEDO (tag: ALB_final)
 ## Contributing modeling software
 | Model | Version | Repository Link | Tag | DOI |
 |-------|---------|-----------------|-----|-----|
-| WRF | 4.2.2 | https://github.com/DanLi-BU/WRF/tree/WRF_ALBEDO | ALB_final | https://doi.org/10.5281/zenodo.14611848
+| WRF | 4.2.2 | https://github.com/DanLi-BU/WRF/tree/WRF_ALBEDO | ALB_final | [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14611848.svg)](https://doi.org/10.5281/zenodo.14611848)
+
 
 ## Reproduce my experiment
 Fill in detailed info here or link to other documentation to thoroughly walkthrough how to use the contents of this repository to reproduce your experiment. Below is an example.
