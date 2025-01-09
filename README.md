@@ -34,7 +34,7 @@ https://github.com/DanLi-BU/WRF/tree/WRF_ALBEDO (tag: ALB_final)
 
 ### Input data
 
-[`wrfinputs_bdy`](./wrfinputs_bdy)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14624322.svg)](https://doi.org/10.5281/zenodo.14624322)
 
 ### Output data
 
